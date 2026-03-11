@@ -37,10 +37,32 @@ The security of RSA relies on the difficulty of factoring large numbers; thus, c
 
 ## Program:
 
+```
+p = 3
+q = 11
 
+n = p * q
+phi = (p - 1) * (q - 1)
+
+e = 3
+d = 7
+
+m = 4
+
+c = (m ** e) % n
+decrypted = (c ** d) % n
+
+print("Public Key:", (e, n))
+print("Private Key:", (d, n))
+print("Message:", m)
+print("Encrypted:", c)
+print("Decrypted:", decrypted)
+```
 
 
 ## Output:
+
+<img width="1849" height="738" alt="image" src="https://github.com/user-attachments/assets/1bfd4213-a930-470e-b301-6f1b3f653ce3" />
 
 
 
